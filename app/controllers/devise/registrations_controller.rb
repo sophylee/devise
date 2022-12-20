@@ -103,7 +103,7 @@ class Devise::RegistrationsController < DeviseController
   # Signs in a user on sign up. You can overwrite this method in your own
   # RegistrationsController.
   def sign_up(resource_name, resource)
-    sign_in(resource_name, resource)
+    sign_in(resource_name, resource, event: :authentication)
   end
 
   # The path used after sign up. You need to overwrite this method
